@@ -7,7 +7,7 @@ nm = nmap.PortScanner()
 target = 'scanme.nmap.org'
 
 # Perform an Nmap scan on the target
-nm.scan(hosts=target, arguments='-p 22,80,443')  # Scanning for ports 22, 80, and 443
+nm.scan(hosts=target, arguments='-p 22,80,443 -sC -sV')  # Scanning for ports 22, 80, and 443
 
 # Get the scan results
 scan_results = nm.csv()  # Get the results in CSV format
